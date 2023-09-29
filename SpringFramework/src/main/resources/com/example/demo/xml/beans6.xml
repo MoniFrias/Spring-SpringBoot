@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	>
+
+	<bean id="person" class="com.example.demo.beans.Person3" autowire="byName" >
+		<property name="id" value="2"></property>
+		<property name="name" value="Carlos"></property>
+		<property name="lastName" value="Perez"></property>
+	</bean>  
+	
+	<bean id="country" class="com.example.demo.beans.Country">
+		<property name="name" value="Spain"></property>
+	</bean>  
+	
+	<bean id="city" class="com.example.demo.beans.City">
+		<property name="name" value="Madrid"></property>
+	</bean> 
+
+</beans>

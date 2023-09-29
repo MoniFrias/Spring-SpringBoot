@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	>
+
+	<bean id="messi" class="com.example.demo.beans.Player">
+		<property name="num" value="10"></property>
+		<property name="name" value="Messi"></property>
+		<property name="team" ref="barcelona"></property>
+	</bean>
+
+	<bean id="barcelona" class="com.example.demo.beans.Barcelona"></bean>
+	<bean id="juventus" class="com.example.demo.beans.Juventus"></bean>
+</beans>

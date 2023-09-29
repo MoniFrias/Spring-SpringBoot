@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	>
+
+
+
+<bean id="person" class="com.example.demo.beans.Person2">
+		<property name="country" ref="country"></property>
+		<property name="id" value="1"></property>
+		<property name="name" value="Luis"></property>
+		<property name="lastName" value="Perez"></property>
+	</bean>  
+	
+	<bean id="country" class="com.example.demo.beans.Country2">
+		<property name="name" value="Canada"></property>
+		<property name="citys">
+			<list> <!--  hacer ref a una coleccion o list de objtos -->
+				<ref bean="city1"/>
+				<ref bean="city2"/>
+				<ref bean="city3"/>
+			</list>
+		</property>
+	</bean>  
+	
+	<bean id="city1" class="com.example.demo.beans.City">
+		<property name="name" value="Vancouver"></property>
+	</bean> 
+	<bean id="city2" class="com.example.demo.beans.City">
+		<property name="name" value="Toronto"></property>
+	</bean> 
+	<bean id="city3" class="com.example.demo.beans.City">
+		<property name="name" value="Montreal"></property>
+	</bean> 
+	
+
+</beans>
